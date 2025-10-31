@@ -75,6 +75,7 @@ parts:
       - libmbedtls-dev
       - libflatbuffers-dev
       - flatbuffers-compiler
+      - flatbuffers
       - libprotobuf-dev
       - protobuf-compiler
       - libftdi1-dev

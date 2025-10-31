@@ -25,6 +25,6 @@ jobs:
 
     - name: Build
       id: build
-      uses: diddlesnaps/snapcraft-multiarch-action@v1
+      uses: canonical/snapcraft-multiarch-action@v1
       with:
         architecture: ${{ matrix.architecture }}

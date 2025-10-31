@@ -103,7 +103,7 @@ parts:
       - libusb-1.0-0
       - libasound2
       - libmbedtls14
-      - libprotobuf23
+      - libprotobuf32t64
       - libturbojpeg
       - libcec6
     override-pull: |

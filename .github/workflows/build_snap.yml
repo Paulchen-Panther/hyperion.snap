@@ -7,10 +7,11 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.target_platform == 'amd64' && 'ubuntu-24.04' || 'ubuntu-24.04-arm' }}
+    runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        target_platform:
+        architecture:
         - amd64
         - armhf
         - arm64
@@ -19,8 +20,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v5
 
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v3
+
     - name: Build
       id: build
       uses: diddlesnaps/snapcraft-multiarch-action@v1
       with:
-        architecture: ${{ matrix.target_platform }}
+        architecture: ${{ matrix.architecture }}

@@ -53,6 +53,7 @@ parts:
       - git
       - cmake
       - build-essential
+      - ninja-build
       - qt6-base-dev
       - libqt6serialport6-dev
       - libqt6sql6-sqlite

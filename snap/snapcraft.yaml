@@ -97,7 +97,6 @@ parts:
       - libusb-1.0-0
       - libasound2
       - libmbedtls14
-      - libprotobuf32t64
       - libturbojpeg
       - libcec6
     override-pull: |
@@ -124,11 +123,11 @@ parts:
       - hyperion-ng
     plugin: nil
     build-snaps:
-      - core22
+      - core24
       - gnome-42-2204
       - gtk-common-themes
     override-prime: |
       set -eux
-      for snap in "core22" "gnome-42-2204" "gtk-common-themes" ; do 
+      for snap in "core24" "gnome-42-2204" "gtk-common-themes" ; do 
         cd "/snap/$snap/current" && find . -type f,l -exec rm -f "$SNAPCRAFT_PRIME/{}" \;
       done

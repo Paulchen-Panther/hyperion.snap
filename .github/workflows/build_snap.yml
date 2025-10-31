@@ -24,7 +24,4 @@ jobs:
       uses: docker/setup-qemu-action@v3
 
     - name: Build
-      id: build
-      uses: canonical/snapcraft-multiarch-action@v1
-      with:
-        architecture: ${{ matrix.architecture }}
+      uses: snapcore/action-build@v1

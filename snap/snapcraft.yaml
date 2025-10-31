@@ -44,8 +44,6 @@ parts:
     cmake-parameters:
       - -DCMAKE_BUILD_TYPE=Release
       - -DUSE_SYSTEM_MBEDTLS_LIBS=ON
-      - -DUSE_SYSTEM_FLATBUFFERS_LIBS=ON
-      - -DUSE_SYSTEM_PROTO_LIBS=ON
       - -DENABLE_DEPLOY_DEPENDENCIES=OFF
     parse-info:
       - usr/share/metainfo/com.hyperion-project.hyperion.metainfo.xml
@@ -73,11 +71,6 @@ parts:
       - libjpeg-dev
       - libturbojpeg0-dev
       - libmbedtls-dev
-      - libflatbuffers-dev
-      - flatbuffers-compiler
-      - flatbuffers
-      - libprotobuf-dev
-      - protobuf-compiler
       - libftdi1-dev
       - libssl-dev
       - libglib2.0-dev

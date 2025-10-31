@@ -1,7 +1,7 @@
 name: hyperion-ng
 adopt-info: hyperion-ng
 
-base: core22
+base: core24
 grade: stable
 confinement: strict
 

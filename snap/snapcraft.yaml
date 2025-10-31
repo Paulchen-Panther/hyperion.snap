@@ -99,7 +99,7 @@ parts:
       - qt6-gtk-platformtheme
       - qt6-qpa-plugins
       - qt6-wayland
-      - libpython3.10
+      - libpython3.12
       - libusb-1.0-0
       - libasound2
       - libmbedtls14

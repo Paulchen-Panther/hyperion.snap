@@ -7,24 +7,24 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.architecture == 'arm64' && 'ubuntu-22.04-arm' || 'ubuntu-22.04' }}
     strategy:
       fail-fast: false
       matrix:
         architecture:
         - amd64
-        - armhf
         - arm64
+        # - armhf
+
     steps:
 
     - name: Checkout
       uses: actions/checkout@v5
 
-    - name: Set up QEMU
-      uses: docker/setup-qemu-action@v3
-
     - name: Build
-      id: build
-      uses: canonical/snapcraft-multiarch-action@v1
-      with:
-        architecture: ${{ matrix.architecture }}
+      id: snapcraft
+      uses: snapcore/action-build@v1
+
+    - name: Show logs if failed
+      if: failure()
+      run: cat ~/.local/state/snapcraft/log/*.log

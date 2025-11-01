@@ -34,6 +34,7 @@ apps:
       - unity7
     environment:
       QT_PLUGIN_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt6/plugins
+      DISABLE_WAYLAND: 1
 
 parts:
   hyperion-ng:
